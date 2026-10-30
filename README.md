@@ -156,7 +156,7 @@ make docker-run    # executa montando ./data como volume
 
 ## 👩‍💻 Autora
 
-**Bruna Beatriz Simões**: [GitHub](https://github.com/SimoesBia)
+**Bruna Beatriz Maria Souza Simões**: [GitHub](https://github.com/SimoesBia)
 
 ## 📄 Licença
 
