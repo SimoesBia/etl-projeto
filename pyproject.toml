@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "etl-clientes"
+version = "1.0.0"
+description = "Pipeline ETL em Python/Pandas que valida clientes, mascara dados sensíveis e gera mensagens personalizadas."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Bruna Beatriz Simões" }]
+dependencies = ["pandas>=2.2", "python-dotenv>=1.0"]
+
+[project.scripts]
+etl-clientes = "etl_pipeline.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
